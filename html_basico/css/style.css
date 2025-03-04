@@ -24,12 +24,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif; /*si no es nombre compuesto no hace falta entre comillas*/
 }
 
 h1 {    /*es mejor hacerlo en archivo a parte para poder usarlo en varias paginas, ahora solo funciona en este archivo html*/
     color:grey; /*; solo se tiene que usar obligatoriamente en la ultima instruccion*/
     /* font-family: Arial, Helvetica, sans-serif;  primero buscara la primera, si no esta la segunda ...etc */
-    font-family: "Amita";  /*El que prevalece en igualdad de condiciones es el ultimo*/
+    font-family: "Roboto", Arial, sans-serif;  /*El que prevalece en igualdad de condiciones es el ultimo*/
     font-weight: 400;
     font-style: normal;
 
