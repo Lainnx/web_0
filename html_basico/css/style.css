@@ -1,14 +1,57 @@
+/*Cascading Style Sheets */
+@font-face {
+    font-family: 'Amita';
+    src: url('fonts/Amita/Amita-Regular.woff2') format('woff2'),
+        url('fonts/Amita/Amita-Regular.woff') format('woff'),
+        url('fonts/Amita/Amita-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('fonts/Roboto/Roboto-Regular.woff') format('woff'),
+        url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* elementos por defecto, para "resetear" valores del navegador, * selector universal DE PROPIEDADES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 h1 {    /*es mejor hacerlo en archivo a parte para poder usarlo en varias paginas, ahora solo funciona en este archivo html*/
     color:grey; /*; solo se tiene que usar obligatoriamente en la ultima instruccion*/
-    font-family: Arial, Helvetica, sans-serif;  /*primero buscara la primera, si no esta la segunda ...etc*/
+    /* font-family: Arial, Helvetica, sans-serif;  primero buscara la primera, si no esta la segunda ...etc */
+    font-family: "Mea Culpa", cursive;  /*El que prevalece en igualdad de condiciones es el ultimo*/
+    font-weight: 400;
+    font-style: normal;
+
     span {  /* h1 indica que span dentro de h1 // etiquetas span son neutras, para poder especificar cosas*/
-    color:rgba(255, 58, 101, 0.253);    /*rgba aalpha - transparencia*/
+    color:rgba(255, 58, 101, 0.853);    /*rgba aalpha - transparencia*/
     font-size: 40px;
     font-weight: 800;   /*grosor de la letra*/
     font-style: oblique;
-        }
+    }
 }
 p span{ /*p indica que span dentro de p |o se puede anidar detro del selector superior*/
     color:green;
     font-size: 20px;
+}
+.texto_rojo{    /*. simbolo clase*/
+    color:tomato    /*los que tenian la clase texto rojo en rojo el resto no(especificidad 10, + importante que la de p)*/
+}
+p { /*todos los parrafos*/
+    color:green;
+    font-size: 20px;
+}   /*. en css equivale a class en html*/
+
+#p-azul, #p-azul2 {    /*# simbolo id, los selectores se pueden acumular con ","*/
+    color: blue;
 }
