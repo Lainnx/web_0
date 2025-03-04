@@ -1,0 +1,14 @@
+h1 {    /*es mejor hacerlo en archivo a parte para poder usarlo en varias paginas, ahora solo funciona en este archivo html*/
+    color:grey; /*; solo se tiene que usar obligatoriamente en la ultima instruccion*/
+    font-family: Arial, Helvetica, sans-serif;  /*primero buscara la primera, si no esta la segunda ...etc*/
+    span {  /* h1 indica que span dentro de h1 // etiquetas span son neutras, para poder especificar cosas*/
+    color:rgba(255, 58, 101, 0.253);    /*rgba aalpha - transparencia*/
+    font-size: 40px;
+    font-weight: 800;   /*grosor de la letra*/
+    font-style: oblique;
+        }
+}
+p span{ /*p indica que span dentro de p |o se puede anidar detro del selector superior*/
+    color:green;
+    font-size: 20px;
+}

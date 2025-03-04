@@ -1,17 +1,44 @@
-<!---->
+<!--Index es el fichero que arranca todo-->
 <!DOCTYPE html> <!-- etiqueta que dice que estas usando html5-->
 <html lang="es">
 <head>  <!-- para dar info al servidor o al navegador sobre la pagina-->
+
     <meta charset="UTF-8">  <!-- para usar caracteres unicode-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!--viewport: espacio disponible para visualizar la pagina // content... para que escale bien los contenidos(en mobil)-->
     <meta name="author" content="me :/"> <!--name y content van juntos, name nombre y content valor atributo-->
     <meta name="description" content="catalogo de etiquetas HTML">    <!--la primera descripcion que aparece quendo buscas la web por un buscador-->
     <meta name="keywords" content="HTML, CSS">   <!--palabras clave para ayudar en la indexacion-->
     <title>HTML Básico</title> <!-- titulo de la pestaña (lo que aparece arriba)-->
-    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">   <!--organizacion de datos homogenea, cada tipo de archivo en su propia carpeta -->
+    <link rel="stylesheet" href="css/style.css" </link> <!--link a archivo de estilos-->
+    <!-- <style> /*para estilos, h1(marca a estilar){reglas de estilos}*/
+        /*AQUI ESTABA TODO LO QUE AHORA ESTA EN style.css*/
+        /*h1 span {   h1 indica que span dentro de h1 // etiquetas span son neutras, para poder especificar cosas
+            color:red;  
+            font-size: 40px;
+        }*/
+        
+    </style> -->
 </head>
 <body>  <!-- para aspecto visual de pagina-->
     <!-- Etiquetas de texto -->
-    <h1>Titulo 1</h1>   <!--titulo-->
+    <h1>Titulo 1 en esta pagina sobre <span>HTML</span> y <span>CSS</span> </h1>   <!--titulo-->
+    <h2>Titulo 2</h2>
+    <h3>Titulo 3</h3>
+    <h4>Titulo 4</h4>
+    <h5>Titulo 5</h5>
+    <h6>Titulo 6</h6>
+    <p>Soy un <span>párrafo</span></p> <!--Parrafos-->
+    <p>Con cien cañones por banda, viento en popa a toda vela, no corta el mar sino vuela un velero bergantín</p>
+    <q>la etiqueta q es para citas (quotes)</q> <!-- para citas-->
+    <q>Hoy es martes</q>
+    <cite>Alguien</cite> <!-- para indicar de donde viene la cita (autor o referencia)-->
+    <pre>   <!--preformar, enfocada a formatear parrafos, respeta el formato que pongas y usa letra monospace, se supone que esta etiqueta es para mostrar codigo, no poemas-->
+        Con cien cañones por banda
+        viento en popa a toda vela
+        no corta el mar sino vuela
+        un velero bergantín
+    </pre>
+
 </body>
 </html>
