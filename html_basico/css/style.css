@@ -59,4 +59,5 @@ p { /*todos los parrafos*/
 
 a{
     text-decoration: none;  /*para quitar el subrayado de los enlaces*/
+    display: block;     /*para que cada link ocupe un bloque(como los demas tipos de etiquetas, para que ocupe una linea)*/
 }
