@@ -1,0 +1,50 @@
+/*importamos fuentes, import siempre arriba*/
+@font-face {    /*font face le pone nombre a una familia, se puede cambiar el nombre aqui*/
+    font-family: 'Lato';
+    src: url('../fonts/Lato/Lato-Regular.woff2') format('woff2'),
+        url('../fonts/Lato/Lato-Regular.woff') format('woff'),
+        url('../fonts/Lato/Lato-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript/DancingScript-Regular.woff2') format('woff2'),
+        url('../fonts/DancingScript/DancingScript-Regular.woff') format('woff'),
+        url('../fonts/DancingScript/DancingScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*resetear config predeterminada navegador*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Lato,Arial,Helvetica,sans-serif;    /*fuente predeterminada*/
+}
+h1,h2{
+    font-family: "Dancing Script";  /*comillas porque 2 palabras, se puede poner nombre 1 palabra arriba en import*/
+}
+
+/*busca cualquier imagen dentro de header, así hija: 'header img', header contiene las imagenes
+header img{}*/
+header img{
+    width:100%; /*como no tenemos margener(margin:0) va de borde a borde*/
+}
+h1{
+    position:absolute;
+    top:10vw;
+    right:7vw;
+    color:aliceblue;
+    font-size:5vw;/*variable width*/
+}
+.div_1_img{
+    position:absolute;
+}
+.div_1_txt{
+    position:absolute;
+    top:60vw;
+    right:5vw
+}

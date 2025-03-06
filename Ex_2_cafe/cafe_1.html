@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
+    <header>    
         <h1>Cafès del Món</h1>
         <picture>
             <source media="(max-width:450px )" srcset="img/portada_vertical_450px.webp" sizes="450px">   <!--hasta un maximo de 450px-->
@@ -29,9 +29,20 @@
     </nav>
     <main>  <!--sistema flex - relacion padres/hijos-->
         <section>   
-
+            <div>   <!--1a caja(la que quiero centrar),2 cajas mas dentro(2 divs, foto y texto)-->
+                <div class="div_1_img">
+                    <img src="img/taza_cafe_negro_desde_arriba_600x800.avif" alt="taza de café negro desde arriba">
+                </div>
+                <div class="div_1_txt">
+                    <h2>Un café delicioso para todas las ocasiones</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quia doloribus hic. Eveniet repellendus labore magnam repudiandae rerum nobis omnis.</p>
+                </div>
+            </div>
         </section>
-        <section></section>
+        <section>
+            <div class="div_2_txt"><h2>Café natural y sostenible</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos debitis eius sit ducimus laboriosam necessitatibus explicabo minus? Harum, nulla!</p></div>
+            <div class="div_2_img"><img src="img/natural_600x750.avif" alt ="granos de café en manos"></div>
+        </section>
         <section></section>
         <section></section>
         <section></section>
