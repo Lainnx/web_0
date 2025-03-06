@@ -1,22 +1,3 @@
-@font-face {
-    font-family: 'Amita';
-    src: url('../html_basico/fonts/Amita/Amita-Regular.woff2') format('woff2'),  
-        url('../html_basico/fonts/Amita/Amita-Regular.woff') format('woff'),    
-        url('../html_basico/fonts/Amita/Amita-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('../html_basico/fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
-        url('../html_basico/fonts/Roboto/Roboto-Regular.woff') format('woff'),
-        url('../html_basico/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 a{
     text-decoration: none;
@@ -24,7 +5,7 @@ a{
 q{
     margin-left: 20px;
 }
-.tt {
+.tt{
     margin-left: 3%;
 }
 .pie_foto{
