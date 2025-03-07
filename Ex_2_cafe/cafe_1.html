@@ -19,8 +19,8 @@
             <img src="img/index_2000px.avif" alt="Recipiente con café sobre granos de café">    <!--alt - texto descriptivo sobre la foto-->
         </picture>
     </header>
-    <nav>   <!--Menu de navegación-->
-        <ul>
+    <nav class="fondo_oscuro" >   <!--Menu de navegación-->
+        <ul class="columna_central">
             <li><a href="cafe_1.html">Inicio</a></li>
             <li><a href="variedades.html">Variedades</a></li>
             <li><a href="tienda.html">Tienda</a></li>
@@ -28,24 +28,28 @@
         </ul>
     </nav>
     <main>  <!--sistema flex - relacion padres/hijos-->
-        <section>   
-            <div>   <!--1a caja(la que quiero centrar),2 cajas mas dentro(2 divs, foto y texto)-->
-                <div class="div_1_img">
-                    <img src="img/taza_cafe_negro_desde_arriba_600x800.avif" alt="taza de café negro desde arriba">
-                </div>
-                <div class="div_1_txt">
-                    <h2>Un café delicioso para todas las ocasiones</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quia doloribus hic. Eveniet repellendus labore magnam repudiandae rerum nobis omnis.</p>
-                </div>
-            </div>
+        <section>      <!--1a caja(la que quiero centrar),2 cajas mas dentro(2 divs, foto y texto)-->
+            <div><img src="img/taza_cafe_negro_desde_arriba_600x800.avif" alt="taza de café negro desde arriba"></div>
+            <div><h2>Un café delicioso para todas las ocasiones</h2><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam quia doloribus hic. Eveniet repellendus labore magnam repudiandae rerum nobis omnis.</p></div>
+        </section>
+        <section class="fondo_oscuro">
+            <div><h2>Café natural y sostenible</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos debitis eius sit ducimus laboriosam necessitatibus explicabo minus? Harum, nulla!</p></div>
+            <div><img src="img/natural_600x750.avif" alt ="granos de café en manos"></div>
         </section>
         <section>
-            <div class="div_2_txt"><h2>Café natural y sostenible</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos debitis eius sit ducimus laboriosam necessitatibus explicabo minus? Harum, nulla!</p></div>
-            <div class="div_2_img"><img src="img/natural_600x750.avif" alt ="granos de café en manos"></div>
+            <div>video</div>
+            <div><h2>Prepara un decioso café en casa</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tenetur porro similique magnam ut esse recusandae corporis aperiam natus cum!</p></div>
         </section>
-        <section></section>
-        <section></section>
-        <section></section>
+        <section class="fondo_oscuro">
+            <div><h2>El café nunca puede faltar en una buena quedada</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam voluptatibus dolore, officiis culpa vitae accusantium accusamus vero modi earum assumenda.</p></div>
+            <div><img src="img/grupo-amigos-bebiendo-cafe.avif" alt="grupo de personas beiendo café"</div>
+        </section>
+        <section>
+            <h2>Los clientes opinan</h2>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
     </main>
     <footer></footer>
     

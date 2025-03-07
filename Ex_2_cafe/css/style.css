@@ -17,6 +17,11 @@
     font-style: normal;
     font-display: swap;
 }
+/*pseudoclases (como variables, aqui podemos asignar propiedades para que luego se repitan en cualquier parte*/
+:root{
+    --color_fondo_primario:#053617;
+    --color_texto_primario:#aaa;    /*color texto que ira sobre el fondo primario*/
+}
 /*resetear config predeterminada navegador*/
 *{
     margin:0;
@@ -32,19 +37,48 @@ h1,h2{
 header img{}*/
 header img{
     width:100%; /*como no tenemos margener(margin:0) va de borde a borde*/
+    display:block; /*para quitar linea blanca entre imagen y nav, para que se comporte como bloque en vez de linea(img por defecto comportamiuento como linea)*/
 }
 h1{
     position:absolute;
     top:10vw;
     right:7vw;
     color:aliceblue;
-    font-size:5vw;/*variable width*/
+    font-size:5vw; /*variable width*/
 }
-.div_1_img{
-    position:absolute;
+/*nav{    /*etiqueta nav(navegador)*/
+    /*background-color: #053617;  color de fondo para nav
+
+}*/
+
+.fondo_oscuro{  /*en clase para usar varias veces donde se necesite y para cambiarlo facilmente*/
+    background-color: var(--color_fondo_primario);    /*funcion var() detecta que "variables" tienes declaradas*/
+    color:var(--color_texto_primario)
 }
-.div_1_txt{
-    position:absolute;
-    top:60vw;
-    right:5vw
+.columna_central{
+    max-width: 1000px;
+}
+/*PARA CENTRAR: margin: si 1 valor(aplica a todos(up,dn,lt,rt), si 2 up y dn, si 3 (up y dn)+rt+lft, si 4 las 4 en orden horario)>>top right bottom left
+margin: 0 auto;>>top+bottom 0 margin y rt lf reparte automaticamente el margen que le queda*/
+nav{
+    height: 80px;
+    /* align-content: center;  para centrar los elementos sobre el nav */
+    display: flex;
+    align-items: center;
+    ul{ /*SOLO para lista dentro de nav*/
+        /*max-width: 1000px;  como maximo, diseño elastico, no va a crecer mas de 1200 pero hasta entonces se expande*/
+        margin: 0 auto;
+        display: flex;  /*para flex, tiene li de hijos, por herencia se lo dice a los li, por defecto funciona de forma solo horizontal*/
+        justify-content: space-between;    /*aqui ya se lo decimos al flex*/
+    }
+    li{
+        list-style: none;   /*para quitar los puntos de la lista, pero sigue siendo una lista*/
+        padding:.5rem 1rem /*funciona igual que el margin/ .5 up/down 1lados*/
+    }
+    /*los enlaces no reciben herencia, hay que decirselo directamente*/
+    a{
+        color: inherit; /*le decimos que lo herede de la clase fondo oscuro (que contiene nav)*/
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
 }
