@@ -46,39 +46,71 @@ h1{
     color:aliceblue;
     font-size:5vw; /*variable width*/
 }
-/*nav{    /*etiqueta nav(navegador)*/
-    /*background-color: #053617;  color de fondo para nav
-
-}*/
 
 .fondo_oscuro{  /*en clase para usar varias veces donde se necesite y para cambiarlo facilmente*/
-    background-color: var(--color_fondo_primario);    /*funcion var() detecta que "variables" tienes declaradas*/
+    background-color:var(--color_fondo_primario);    /*funcion var() detecta que "variables" tienes declaradas*/
     color:var(--color_texto_primario)
 }
 .columna_central{
     max-width: 1000px;
+    margin:0 auto;
 }
 /*PARA CENTRAR: margin: si 1 valor(aplica a todos(up,dn,lt,rt), si 2 up y dn, si 3 (up y dn)+rt+lft, si 4 las 4 en orden horario)>>top right bottom left
 margin: 0 auto;>>top+bottom 0 margin y rt lf reparte automaticamente el margen que le queda*/
 nav{
     height: 80px;
-    /* align-content: center;  para centrar los elementos sobre el nav */
-    display: flex;
-    align-items: center;
+    /* display:flex;
+    justify-content:center;
+    align-items:center; */
+    align-content: center;  /*para centrar los elementos sobre el nav*/
+
     ul{ /*SOLO para lista dentro de nav*/
         /*max-width: 1000px;  como maximo, diseño elastico, no va a crecer mas de 1200 pero hasta entonces se expande*/
         margin: 0 auto;
         display: flex;  /*para flex, tiene li de hijos, por herencia se lo dice a los li, por defecto funciona de forma solo horizontal*/
         justify-content: space-between;    /*aqui ya se lo decimos al flex*/
+        
     }
     li{
         list-style: none;   /*para quitar los puntos de la lista, pero sigue siendo una lista*/
-        padding:.5rem 1rem /*funciona igual que el margin/ .5 up/down 1lados*/
+        padding:.5rem 1rem; /*funciona igual que el margin/ .5 up/down 1lados*/
+        border-top: 5px solid transparent;  /*para que no se mueva, se mueve porque no hay borders y al crearlos se mueve, los creamos aqui y que no se vean*/
+        border-bottom: 5px solid transparent;
+
+        &:hover{    /*efecto hover, para efectos*/
+            border-top: 5px solid white;
+            border-bottom: 5px solid white;
+            color:white;
+        }
     }
     /*los enlaces no reciben herencia, hay que decirselo directamente*/
     a{
         color: inherit; /*le decimos que lo herede de la clase fondo oscuro (que contiene nav)*/
         text-decoration: none;
         font-size: 1.5rem;
+    }
+}
+/* seccion son las barras laterales, dentro de ahí cajas */
+section > div{  /*hijo directo de seccion, div*/
+    display: flex;
+    div{    /*todos los div dentro de este flex*/
+        width: 100%;    /*que el texto ocupe 100%*/
+        align-content: center;
+        h2{
+            font-size: 4vw;
+            padding:.5rem;  /*pequeño padding para que no rebose a la imagen*/
+        }
+        p{
+            font-size: 1.25rem; /*20px*/
+            padding:.5rem;
+        }
+    }
+    img{    /*como solo hay una imagen por seccion se puede poner aqui*/
+        width: 100%;    /*para que la imagen ocupe lo mismo que el texto*/
+        display: block;
+    }
+    video{
+        width: 100%;
+        display:block;
     }
 }
