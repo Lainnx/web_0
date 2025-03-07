@@ -46,6 +46,10 @@ h1{
     color:aliceblue;
     font-size:5vw; /*variable width*/
 }
+h2{
+    font-size: 2.8vw;
+    padding:.5rem;
+}
 
 .fondo_oscuro{  /*en clase para usar varias veces donde se necesite y para cambiarlo facilmente*/
     background-color:var(--color_fondo_primario);    /*funcion var() detecta que "variables" tienes declaradas*/
@@ -97,20 +101,50 @@ section > div{  /*hijo directo de seccion, div*/
         width: 100%;    /*que el texto ocupe 100%*/
         align-content: center;
         h2{
-            font-size: 4vw;
             padding:.5rem;  /*pequeño padding para que no rebose a la imagen*/
         }
         p{
             font-size: 1.25rem; /*20px*/
             padding:.5rem;
         }
+        overflow: hidden;   /*esto al div porque es el que tiene que ocultar el overflow de la transicion*/
     }
     img{    /*como solo hay una imagen por seccion se puede poner aqui*/
         width: 100%;    /*para que la imagen ocupe lo mismo que el texto*/
         display: block;
+        transition: transform 1s ease;
+        &:hover{    /*que cuando el raton pase por encima...*/
+            transform: scale(1.2);
+        }
     }
     video{
         width: 100%;
         display:block;
     }
+}
+section > h2{   /*tambien con clase o id*/
+    text-align: center;
+    /* margin-top: 30px; margin top igual abajo*/
+    margin: 2rem 0 1rem 0;  /*margins arriba y abajo*/
+}
+.opiniones{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-start;
+
+    q{
+        font-size: 1.25rem;
+    }
+    cite{
+        color:red;
+        display:block;  /*porque es de linea, hay que hacerla block*/
+        text-align: right;
+        font-size: 1.3rem;
+        padding-right: 5px; /*porque se veía cortado*/
+    }
+}
+footer{
+    margin-top: 2rem;   /*2 porque es el que tiene tambien el de arriba*/
+    height: 200px;
 }
