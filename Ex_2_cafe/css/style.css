@@ -147,4 +147,21 @@ section > h2{   /*tambien con clase o id*/
 footer{
     margin-top: 2rem;   /*2 porque es el que tiene tambien el de arriba*/
     height: 200px;
+    display:flex;
+    justify-content: space-around;
+    li{
+        list-style: none;
+    }
+}
+.flex{
+    display: flex;
+}
+.socials{
+    display: flex;
+    justify-content: space-around;
+    
+    img{
+        display:block;
+        width: 15%;
+    }
 }
