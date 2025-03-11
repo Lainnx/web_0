@@ -46,8 +46,8 @@ h1{
     color:aliceblue;
     font-size:5vw; /*variable width*/
 }
-h2{
-    font-size: 2.8vw;
+h2{                                           /*clamp para funcion variable, para diseño dinamico pc mobil*/
+    font-size: clamp(1.8rem, 4vw + 1rem ,2.7rem);/*2.8vw-- clamp(tamaño_minimo, valor_optimo(medio), valor maximo || NECESITA EL ESPACIO, NO SE PUEDE PONER PEGADO*/
     padding:.5rem;
 }
 
@@ -102,10 +102,18 @@ section > div{  /*hijo directo de seccion, div*/
         align-content: center;
         h2{
             padding:.5rem;  /*pequeño padding para que no rebose a la imagen*/
+
+            @media(max-width:550px){    /*que cuando display block se centre el texto*/
+                text-align: center;
+            }
         }
         p{
-            font-size: 1.25rem; /*20px*/
+            font-size: clamp(.8rem, 1vw + .8rem ,1.25rem); /*1.25-20px, tamaño fuente variable dependiendo del tamaño*/
             padding:.5rem;
+            @media(max-width:550px){    /*que cuando display block se centre el texto*/
+                text-align: center;
+                padding: 4vw;   /*mas margen asi no queda tan pegado el texto*/
+            }
         }
         overflow: hidden;   /*esto al div porque es el que tiene que ocultar el overflow de la transicion*/
     }
@@ -120,6 +128,9 @@ section > div{  /*hijo directo de seccion, div*/
     video{
         width: 100%;
         display:block;
+    }
+    @media(max-width:450px){ /*tamaño maximo pantalla hasta 450px(mobil) en vez de display-flex -> display block(lo pone en columna)*/
+        display: block;
     }
 }
 section > h2{   /*tambien con clase o id*/
@@ -143,25 +154,43 @@ section > h2{   /*tambien con clase o id*/
         font-size: 1.3rem;
         padding-right: 5px; /*porque se veía cortado*/
     }
+    @media(max-width:450px){ /*tamaño maximo pantalla hasta 450px(mobil) en vez de display-flex -> display block(lo pone en columna)*/
+        display: block;
+        padding: 4vw;   /*padding para las q, cuando en mobil*/
+    }
 }
 footer{
     margin-top: 2rem;   /*2 porque es el que tiene tambien el de arriba*/
-    height: 200px;
+    
     display:flex;
     justify-content: space-around;
     li{
         list-style: none;
     }
+
+
 }
 .flex{
     display: flex;
+
+@media(max-width:550px){
+    display: block;
+}
 }
 .socials{
     display: flex;
-    justify-content: space-around;
+    /* justify-content: start; */
+
+    /* li {
+        width: 100%;
+    } */
     
     img{
-        display:block;
+        /* display:block; */
         width: 15%;
     }
 }
+.invertir{
+    flex-direction: row-reverse;    /*darle la vuelta*/
+}
+/*para hacer responsive, clamp para tipografias y media para la distribucion*/

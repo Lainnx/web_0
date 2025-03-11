@@ -35,21 +35,21 @@
             </div>
         </section>
         <section class="fondo_oscuro">
-            <div class="columna_central">
-            <div><h2>Café natural y sostenible</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos debitis eius sit ducimus laboriosam necessitatibus explicabo minus? Harum, nulla!</p></div>
-            <div><img src="img/natural_600x750.avif" alt ="granos de café en manos"></div>
+            <div class="columna_central invertir">
+                <div><img src="img/natural_600x750.avif" alt ="granos de café en manos"></div>
+                <div><h2>Café natural y sostenible</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et dignissimos debitis eius sit ducimus laboriosam necessitatibus explicabo minus? Harum, nulla!</p></div>
             </div>
         </section>
         <section>
             <div class="columna_central">
-            <div><video  src="assets/Basic_heart_latte_art.mp4" controls muted stop loop></video></div>
+            <div><video  src="assets/Basic_heart_latte_art.mp4" controls muted loop></video></div>
             <div><h2>Prepara un decioso café en casa</h2><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tenetur porro similique magnam ut esse recusandae corporis aperiam natus cum!</p></div>
             </div>
         </section>
         <section class="fondo_oscuro">
-            <div class="columna_central">
+            <div class="columna_central invertir"><!--este div es el padre de la imagen, asi quando en mobil display:block; y se vera foto-texto-foto-texto(clase invertir)-->
+            <div><img src="img/grupo-amigos-bebiendo-cafe.avif" alt="grupo de personas beiendo café"></div>    
             <div><h2>El café nunca puede faltar en una buena quedada</h2><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam voluptatibus dolore, officiis culpa vitae accusantium accusamus vero modi earum assumenda.</p></div>
-            <div><img src="img/grupo-amigos-bebiendo-cafe.avif" alt="grupo de personas beiendo café"</div>
             </div>
         </section>
         <section>
@@ -65,11 +65,12 @@
         <div class="columna_central flex">
             <div><h3>Contacto</h3>
                 <a href="mailto:info@cafesdelmon.com">info@cafesdelmon.com</a>
-                <div class="socials">
-                    <div><a href="http://facebook.com/cafe"><img src="logos/facebook.png"></a></div>
-                    <div><a href="http://twitter.com/cafe"><img src="logos/twitter.png"></a></div>
-                    <div><a href="http://instagram.com/cafe"><img src="logos/instagram.png"></a></div>
-                </div>
+                <!-- <ul class="socials"> -->
+                    <ul class="socials">
+                        <li><a href="http://facebook.com/cafe"><img src="logos/facebook.png"></a></li>
+                        <li><a href="http://twitter.com/cafe"><img src="logos/twitter.png"></a></li>
+                        <li><a href="http://instagram.com/cafe"><img src="logos/instagram.png"></a></li>
+                    </ul>
             </div>
             <div><h3>Enlaces utiles</h3>
                 <ul>
@@ -103,3 +104,5 @@
     
 </body>
 </html>
+
+
