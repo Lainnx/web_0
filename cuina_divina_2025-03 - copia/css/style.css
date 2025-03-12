@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --breakpoint: 1200px;
+    --color-clar: rgb(245, 245, 245);
+    --color-secundari: #a46d3c;
+    --color-secundari50x100: hsla(28, 46%, 44%, 0.50);
+    --font-titols: "Lexend", Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: var(--color-clar);
+}
+
+.breakpoint {   /*clase para el centrado*/
+    max-width: var(--breakpoint);
+    margin: 0 auto;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:2px solid var(--color-secundari); /*barra color marron*/
+
+    @media(max-width:600px){
+        display: block;
+    }
+}
+h1{
+    font-family: var(--font-titols);
+    font-size: clamp(1.4rem, 3vw + 1rem, 2.5rem);  /*3vw es 3% de ancho +1rem para que la medida la dé en rem*/
+    font-weight: 200;               /*||gris claro, transparencia de .5*/
+    text-shadow:4px 4px 2px rgb(128,128,128,.5);  /*partiendo de top izqu suponemos un rayo que se proyecta sobre la fuente| cuanto se a desviar el rayo en el sentido de las x |(same)y|difuminar|color*/
+    span{
+        font-size: inherit; /*para que herede de h1 los atributos*/
+        font-family: inherit;
+        color: var(--color-secundari);
+        font-weight: 400;   /*para que "adelgaze" o "engorde" la fuente*/
+    }
+}
+header > div:first-child{    /*seleccionar 1er hijo directo div de header*/
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    img{
+        width: clamp(100px, 20vw ,200px);
+    }
+}
+header>div:last-child{      /*seleccionar ultimo hijo directo de header*/
+    /* border:2px solid red; */
+    display: flex;
+    justify-content: right;
+    gap: 1rem;  /*los iconos estan muy juntos*/
+    img{
+        width: 50px;
+    };
+    @media(max-width:600px){
+        justify-content: center;    /*aaa*/
+        img{
+            width: 30px;
+        }
+    }
+}
+ul.breakpoint{    /*hay un ul que tiene la clase breakpoint*/
+    display: flex;
+    justify-content: space-between;
+    list-style: none;   /*le quita los puntos a la lista*/
+}
+nav{
+    padding: 20px;  /*para separar*/
+    box-shadow:5px 5px 5px grey ;   /*elementos tipo div son cajas, aplicar al nav para que vaya de punta a pùnta(no centrado)*/
+    margin-bottom: 2rem; /*esta demasiado pegado por arriba*/
+}
+section.breakpoint{ /*seccion con clase breakpoint*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));    /*auto-fill para que ocupen el espacio disponible | minmax intentara poner 300px y sino puede pondra 1fr*/
+    gap: 2rem;  /*para separar*/
+
+    article{
+        border:5px solid var(--color-secundari);
+    }
+    img{
+        width: 100%;
+    }
+    h2{
+        font-family: var(--font-titols);
+        color: var(--color-secundari);
+        font-weight: 400;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    p{
+        padding: 1rem;  /*que no esté tan pegado*/
+    }
+    div{
+        text-align: center; /*centrado*/        
+        margin-bottom: 2rem;
+    }
+    a{
+        
+        /* display: block; para que ocupe todo el ancho (para poder centrar) */
+        padding:5px 10px;  /*top-horizontal-bot |para separar del borde de abajo*/
+        border-bottom: 2px solid grey;
+        color:grey;
+        &:hover{
+            border-bottom:2px solid var(--color-secundari);
+            color:var(--color-secundari);
+        }
+    }
+    @media(max-width:1200px){   /*para que no este tan pegado a los lados, hasta 1200px*/
+        padding: 3vw;   /*viewport width, relativo al tamaño de la pantalla*/   
+    }
+}

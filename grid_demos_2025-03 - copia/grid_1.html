@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template</title>
+    <style> /*css embedded en html*/
+
+        * {
+            box-sizing: border-box; /*para que los contenidos vayan desde el borde hasta adentro*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            margin: 1rem;       /*lo separa del borde*/
+            border: 2px solid steelblue;
+            height: 300px;
+
+            /* display: flex; */
+            /* justify-content: start; opcion por defecto */
+            display: grid;
+            /* grid-template-columns: 100px 50vw;   columna fija de x e y pixeles, y si caben las pone */
+            /* grid-template-columns: 1fr 1fr; fraccion, la misma anchura 1 en 2 fracciones(columnas)|| 1fr 2fr |1a 2a */
+            /* grid-template-columns: repeat(3, 1fr);  elementos a repetir , medida */
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px) ,1fr));    /*(200px)min valor minimo(el minimo cuando pantalla grande) max (el maximo(cuando pantalla pequeña)*/
+            gap:.5rem;  /*separacion entre elementos*/              /*si los 300px no caben la anchura sera del 100% (funcion min)*/
+        }
+
+        .elemento { /*caracteristicas comunes*/
+            border: 1px solid black;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        .elemento1 {
+            background-color: brown;
+        }
+        
+        .elemento2 {
+            background-color: darkgreen;
+        }
+        .elemento3 {
+            background-color: darkcyan;
+        }
+        .elemento4 {
+            background-color: darkblue;
+        }
+        .elemento5 {
+            background-color: darkslategrey;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="elemento elemento1">1</div>
+        <div class="elemento elemento2">2</div>
+        <div class="elemento elemento3">3</div>
+        <div class="elemento elemento4">4</div>
+        <div class="elemento elemento5">5</div>
+    </div>
+</body>
+</html>
